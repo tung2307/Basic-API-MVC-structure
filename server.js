@@ -5,7 +5,7 @@ const path = require('path');
 require('dotenv').config()
 const port = process.env.PORT;
 
-
+app.use(express.json())
 // Global Error Handler. Important function params must start with err
 app.use((err, req, res, next) => {
     console.log(err.stack);
